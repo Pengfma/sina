@@ -1,0 +1,512 @@
+/********
+*页面样式
+********/
+
+
+/*=============
+  基本默认值
+  ============ */
+
+html{  font-size: 62.5%;  color: #686868;  }
+
+body{  font-size: 1.4rem;  line-height: 1.5;  background-color: #f7f7f7;  }
+
+::selection{
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+a{  text-decoration: none;  color: #666;  }
+
+a:hover,a:active{  text-decoration: underline;  }
+
+ul{  margin: 0;  padding: 0; }
+
+p {  margin: 0 0 0.8rem;  }
+
+
+/*=============
+  工具样式
+  ============ */
+
+.center-block{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.position-rel{
+    position: relative;
+}
+.position-abs{
+    position: absolute;
+}
+.pull-right{
+    float: right !important;
+}
+
+.pull-left{
+    float: left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: block !important;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.text-hide{
+    font:0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background:#337ab7;
+    border-radius: 8px;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.clearfix:before,.clearfix:after{
+    content:" ";
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+
+/*=============
+  浏览器更新提示
+  ============ */
+
+.browser-up-grade{
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+
+/* 返回顶部图标样式*/
+#toTop-box{
+    width: 50px; height: 50px;
+    position: fixed; bottom: 100px; right: 10px;
+    display: none;
+    z-index: 10;
+}
+#toTop-item{
+    display: inline-block;
+    width: 100%;height: 100%;
+    background: url("../img/toTop/toTop.png") 7px 7px no-repeat;
+}
+#toTop-close{
+    display: none;
+    position: absolute; top:-10px; right: -5px;
+}
+
+
+/*=============
+  网页头部样式
+  ============ */
+
+/*nav 开始*/
+.nav-container{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: #148CCA;
+    width: 100%;
+    height: 50px;    /*1rem在chrome浏览器的最小字体为12px,在此为了精确起见，改用px*/
+}
+.nav-main{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.nav-main ul li{
+    list-style: none;
+    display: block;
+    float: left;
+}
+
+.nav-main li a{
+    padding:0 1rem;
+    display: block;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+}
+
+.nav-left li a:hover, .nav-left li a:active{
+    background-color: #fff;
+    cursor: pointer;
+    color: #7b8c86;
+    text-decoration: none;
+}
+
+.nav-right{
+    float: right;
+}
+
+.line{
+    margin: 1.3rem 0 0 0 ;
+    padding: 0;
+    font-weight: bold ;
+    color: rgba(221, 221, 221, 0.6);
+}
+
+.nav-btn{
+    background: url("../img/btn.png") no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    margin-top: 1.3rem ;
+    float: right;
+    display: none;
+}
+
+.nav-menu{
+    position: absolute;
+    padding-left: 5%;
+    z-index: 100;
+    background-color: #1283b7;
+    width: 100%;
+    display: none;
+}
+
+.nav-menu li{
+    margin: 0.5rem 0;
+    list-style: none;
+}
+
+.nav-menu li a{
+    font-weight: bold;
+    color: #fff;
+}
+.nav-select{
+    background-color: #88C1D0;
+}
+
+
+@media all and (max-width: 60em){
+    .nav-main{
+        width: 90%;
+    }
+
+    .nav-left{
+        display: none;
+    }
+
+    .nav-right{
+        float: none;
+        margin-left:48%;
+    }
+
+    .nav-main li a{
+        padding:0 0.2rem;
+    }
+
+    .nav-btn{
+        display: block;
+    }
+}
+@media all and (min-width: 30em) and (max-width: 50em){
+
+}
+@media all and (max-width: 30em){
+    .nav-main{
+        width: 95%;
+    }
+
+    html{
+        font-size: 8px;
+    }
+
+}
+
+/*nav 结束*/
+.ad{
+    margin-top: 50px;
+}
+
+
+/*=============
+  网页主题内容样式
+  ============ */
+.content{
+    margin-top: 0.7rem;
+}
+.content-container{
+    width: 80%;
+    padding: 1rem 0;
+    margin: 1rem auto;
+    overflow: hidden;
+
+}
+
+ .content-pic{
+     width: 33%;
+     padding-bottom: 1.5rem;
+     box-sizing: border-box;
+}
+
+.content-pic img,.content-pic h2,.content-pic p{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content-text{
+    width: 67%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+.content-text-description{
+    margin-bottom: 1rem;
+}
+
+.content-text-description ul {
+    width: 50%;
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+}
+
+@media all and (max-width: 60em){
+    .content-container{
+        width: 90%;
+        padding: 0.5rem 0;
+        margin: 1rem auto;
+    }
+    .content-pic, .content-text, .content-text-description ul{
+        float: none !important;
+        width: 100%;
+    }
+
+}
+@media all and (min-width: 30em) and (max-width: 50em){
+
+}
+@media all and (max-width: 30em){
+    .content-container{
+        width: 95%;
+        padding: 0.3rem 0;
+        margin: 0.8rem auto;
+    }
+    html{
+        font-size: 8px;
+    }
+}
+
+
+
+
+/*视频*/
+
+.video img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+/*产品特色*/
+.container-product{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-product  li{
+    width: 25%;
+    float: left;
+    list-style: none;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.container-product li img{
+    margin: 0 auto;
+    display: block;
+}
+
+.container-product li p{
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+
+.container-product li p+p{
+    text-align: left;
+}
+
+@media all and (max-width: 60em){
+
+
+}
+@media all and (min-width: 30em) and (max-width: 60em){
+    .container-product li{
+        width: 50%;
+    }
+
+}
+@media all and (max-width: 30em){
+    .container-product li{
+        width: 50%;
+    }
+
+    html{
+        font-size: 8px;
+    }
+}
+
+
+/*成功案例*/
+.container-success{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.cont-success .pic-success{
+    width: 40%;
+    box-sizing: border-box;
+
+}
+
+.cont-success .text-success{
+    width: 60%;
+    padding-left: 3rem;
+    box-sizing: border-box;
+    font-size: 2rem;
+}
+
+.text-success p{
+    margin-top:5%;
+}
+
+.pic-success img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+@media all and (max-width: 60em){
+
+
+}
+@media all and (min-width: 30em) and (max-width: 60em){
+    .text-success p{
+        margin-top:0;
+        font-size: 1.5rem;
+    }
+
+}
+@media all and (max-width: 30em){
+    .cont-success .pic-success{
+        width: 40%;
+        box-sizing: border-box;
+        float: none !important;
+    }
+
+    .cont-success .text-success{
+        width: 100%;
+        padding-left: 0;
+        box-sizing: border-box;
+        font-size: 1rem;
+        float: none !important;
+    }
+
+    .text-success p{
+        margin-top:5%;
+    }
+
+    .pic-success img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: block;
+    }
+}
+
+/*=============
+  网页尾部样式
+  ============ */
+
+.container-footer{
+    width: 90%;
+    margin: 0 auto 2rem;
+}
+
+.footer-line{
+    clear: both;
+    margin: 2rem 0;
+    border-top: 1px solid #eee;
+}
+
+.footer li{
+    float: left;
+    width: 16.66%;
+    list-style: none;
+}
+
+@media all and (max-width: 60em){
+
+
+}
+@media all and (min-width: 30em) and (max-width: 60em){
+    .footer li{
+        width: 50%;
+    }
+    .weiXin, .renZheng{
+        clear: both;
+        width: 100%;
+    }
+
+}
+@media all and (max-width: 30em){
+    .footer li{
+        width: 50%;
+    }
+    .weiXin, .renZheng{
+        clear: both;
+        width: 100%;
+    }
+
+    html{
+        font-size: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
